@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <title>
+        Show
+    </title>
+    <body>
+        <h1>ALL HOSTELS</h1>
+        <table border="2" width="100%">
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>ADDRESS</th>
+            </tr>
+            {% for h in h_s %}
+            <tr>
+                <td>{{h.id}}</td>
+                <td>{{h.name}}</td>
+                <td>{{h.add}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="{% url 'home' %}">HOME</a>
+    </body>
+</html>

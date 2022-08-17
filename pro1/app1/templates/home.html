@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+        <title>
+            Home
+        </title>
+    <body style="background-color: teal;">
+        <h1 style="color: black;background-color:crimson;text-align:center;">HOSTEL</h1>
+        <hr>
+        <br>
+        <form action="{% url 'home' %}" method="post">
+            {% csrf_token %}
+            <h2 style="color: black;background-color:crimson;text-align:center;">HOSTEL ENTRY FORM</h2>
+            <hr>
+            <br>
+            NAME = <input name = "h_name"><br><br>
+            ADDRESS = <input name = "h_add"><br><br>
+            <input type="submit" value="SUBMIT"><br><br>
+        </form>
+        <a href="{% url 'show' %}">SHOW ALL</a>
+    </body>
+</html>
